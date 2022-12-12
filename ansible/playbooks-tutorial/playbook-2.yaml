@@ -9,12 +9,6 @@
       state: absent
       update_cache: true  
       
-  # Stop nginx services
-  - name: "stop Nginx Services"
-    service:
-      name: nginx
-      state: stopped
-
   - name: "uninstall packages"
     apt:
       name: nginx
