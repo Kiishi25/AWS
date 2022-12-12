@@ -1,10 +1,22 @@
 - hosts: localhost
   connection: local
   become: true
-  # Task : uninstall nginx
+  # Uninstall nginx
   tasks:
   - name: uninstall nginx
     apt:
       name: nginx
       state: absent
       update_cache: true  
+      
+  # Stop nginx services
+  - name: "stop Nginx Services"
+    service:
+      name: nginx
+      state: stopped
+
+  - name: "uninstall packages"
+    apt:
+      name: nginx
+      state: absent
+      autoremove: yes
