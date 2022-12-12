@@ -1,2 +1,2 @@
 # training_week8
-Ansible f
+Solutions to tutorial QA Training Week 8
