@@ -1,0 +1,10 @@
+- hosts: localhost
+  connection: local
+  become: true
+  # Task : uninstall nginx
+  tasks:
+  - name: uninstall nginx
+    apt:
+      name: nginx
+      state: absent
+      update_cache: true  
