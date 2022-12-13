@@ -9,5 +9,5 @@ all:
         172.31.41.162
     vms:
       children:
-      west:
-      east:
+        west:
+        east:
